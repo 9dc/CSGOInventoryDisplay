@@ -1,10 +1,11 @@
 <form action="" method="post">
-  SteamID64: <input name="id" type="text" />
+  Steam Profile Url: <input name="id" type="text" />
   <input name="submit" type="submit" />
 </form>
 <?php
   if (isset($_POST['submit'])) {
     $id = $_POST['id'];
+    	$id = str_ireplace("http://steamcommunity.com/","",$id);
 	$query = "http://steamcommunity.com/profiles/".$id."/inventory/json/730/2/";
 	$json = file_get_contents($query);
 	$data = json_decode($json, true);
