@@ -34,9 +34,5 @@
 
 		echo PHP_EOL;
 	}
-?>
-<?php
-  }
-  else {
-} 
+  }	
 ?>
